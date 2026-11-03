@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="24dp"
+    android:gravity="center_horizontal"
+    tools:context=".ejercicios.ejercicio13.Ejercicio13Activity">
+
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Ejercicio 13 - Contador de Dedos"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_marginBottom="16dp" />
+
+    <TextView
+        android:id="@+id/tvCantidadDedos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dedos en pantalla: 0"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="?attr/colorPrimary"
+        android:textAlignment="center"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/tvPosicionesDedos"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Toca la pantalla con uno o varios dedos..."
+        android:textSize="16sp"
+        android:fontFamily="monospace"
+        android:textAlignment="center"
+        android:textColor="?android:attr/textColorSecondary"
+        android:layout_marginBottom="24dp" />
+
+    <FrameLayout
+        android:id="@+id/touchArea"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="#F3E5F5"
+        android:clickable="true"
+        android:focusable="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Área Táctil Multitouch"
+            android:textSize="18sp"
+            android:textColor="#8E24AA" />
+
+    </FrameLayout>
+
+</LinearLayout>

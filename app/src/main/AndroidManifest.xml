@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <application
+        android:allowBackup="true"
+        android:dataExtractionRules="@xml/data_extraction_rules"
+        android:fullBackupContent="@xml/backup_rules"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Actividad6">
+
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ejercicios.ejercicio1.Ejercicio1Activity" android:exported="false" />
+        <activity android:name=".ejercicios.ejercicio2.Ejercicio2Activity" android:exported="false" />
+        <activity android:name=".ejercicios.ejercicio3.Ejercicio3Activity" android:exported="false" />
+        <activity android:name=".ejercicios.ejercicio4.Ejercicio4Activity" android:exported="false" />
+        <activity android:name=".ejercicios.ejercicio5.Ejercicio5Activity" android:exported="false" />
+        <activity android:name=".ejercicios.ejercicio6.Ejercicio6Activity" android:exported="false" />
+        <activity android:name=".ejercicios.ejercicio7.Ejercicio7Activity" android:exported="false" />
+        <activity android:name=".ejercicios.ejercicio8.Ejercicio8Activity" android:exported="false" />
+        <activity android:name=".ejercicios.ejercicio9.Ejercicio9Activity" android:exported="false" />
+        <activity android:name=".ejercicios.ejercicio10.Ejercicio10Activity" android:exported="false" />
+        <activity android:name=".ejercicios.ejercicio11.Ejercicio11Activity" android:exported="false" />
+        <activity android:name=".ejercicios.ejercicio12.Ejercicio12Activity" android:exported="false" />
+        <activity android:name=".ejercicios.ejercicio13.Ejercicio13Activity" android:exported="false" />
+        <activity android:name=".ejercicios.ejercicio14.Ejercicio14Activity" android:exported="false" />
+        <activity android:name=".ejercicios.ejercicio15.Ejercicio15Activity" android:exported="false" />
+        <activity android:name=".ejercicios.ejercicio16.Ejercicio16Activity" android:exported="false" />
+        <activity android:name=".ejercicios.ejercicio17.Ejercicio17Activity" android:exported="false" />
+        <activity android:name=".ejercicios.ejercicio18.Ejercicio18Activity" android:exported="false" />
+        <activity android:name=".ejercicios.ejercicio19.Ejercicio19Activity" android:exported="false" />
+        <activity android:name=".ejercicios.ejercicio20.Ejercicio20Activity" android:exported="false" />
+        <activity android:name=".ejercicios.ejercicio21.Ejercicio21Activity" android:exported="false" />
+        <activity android:name=".ejercicios.ejercicio22.Ejercicio22Activity" android:exported="false" />
+        <activity android:name=".ejercicios.ejercicio23.Ejercicio23Activity" android:exported="false" />
+        <activity android:name=".ejercicios.ejercicio24.Ejercicio24Activity" android:exported="false" />
+        <activity android:name=".ejercicios.ejercicio25.Ejercicio25Activity" android:exported="false" />
+        <activity android:name=".ejercicios.ejercicio26.Ejercicio26Activity" android:exported="false" />
+        <activity android:name=".ejercicios.ejercicio27.Ejercicio27Activity" android:exported="false" />
+        <activity android:name=".ejercicios.ejercicio28.Ejercicio28Activity" android:exported="false" />
+
+    </application>
+
+</manifest>
