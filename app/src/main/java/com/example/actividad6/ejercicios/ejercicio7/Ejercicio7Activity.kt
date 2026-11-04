@@ -9,7 +9,7 @@ import com.example.actividad6.R
 
 class Ejercicio7Activity : AppCompatActivity() {
 
-    private lateinit var tvMensajeTactil: TextView
+    private lateinit var lblEstadoTouch: TextView
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,21 +19,21 @@ class Ejercicio7Activity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "Ejercicio 7"
 
-        tvMensajeTactil = findViewById(R.id.tvMensajeTactil)
+        lblEstadoTouch = findViewById(R.id.lblEstadoTouch)
 
-        tvMensajeTactil.setOnTouchListener { view, event ->
+        lblEstadoTouch.setOnTouchListener { view, event ->
             when (event.action) {
                 MotionEvent.ACTION_DOWN -> {
-                    tvMensajeTactil.text = "Pulsación iniciada"
+                    lblEstadoTouch.text = "Pulsación iniciada"
                     true
                 }
                 MotionEvent.ACTION_MOVE -> {
-                    tvMensajeTactil.text = "Desplazando el dedo"
+                    lblEstadoTouch.text = "Desplazando el dedo"
                     true
                 }
                 MotionEvent.ACTION_UP -> {
                     view.performClick()
-                    tvMensajeTactil.text = "Pulsación finalizada"
+                    lblEstadoTouch.text = "Pulsación finalizada"
                     true
                 }
                 else -> false

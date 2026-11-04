@@ -5,28 +5,29 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="24dp"
+    android:padding="28dp"
     android:gravity="center_horizontal"
     tools:context=".ejercicios.ejercicio4.Ejercicio4Activity">
 
     <TextView
-        android:id="@+id/tvHeader"
+        android:id="@+id/lblTituloCalculo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ejercicio 4 - Suma de N Números con MiTarea"
+        android:text="Ejercicio 4 - Suma de N Números (MiTarea)"
         android:textSize="20sp"
         android:textStyle="bold"
         android:textAlignment="center"
+        android:textColor="@color/primary_color"
         android:layout_marginBottom="32dp" />
 
     <com.google.android.material.textfield.TextInputLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Ingresa el valor de N"
+        android:hint="Ingrese la cantidad N"
         android:layout_marginBottom="24dp">
 
         <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etNumeroN"
+            android:id="@+id/inputLimiteN"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:inputType="number"
@@ -35,10 +36,10 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnCalcular"
+        android:id="@+id/btnCalcularSuma"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Calcular con MiTarea"
+        android:text="Calcular Suma en Hilo"
         android:textSize="16sp"
         android:paddingStart="32dp"
         android:paddingEnd="32dp"
@@ -47,13 +48,13 @@
         android:layout_marginBottom="32dp" />
 
     <TextView
-        android:id="@+id/tvResultado"
+        android:id="@+id/lblResultadoSuma"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Resultado: -"
         android:textSize="22sp"
         android:textStyle="bold"
-        android:textColor="?attr/colorPrimary"
+        android:textColor="@color/custom_blue"
         android:textAlignment="center" />
 
 </LinearLayout>

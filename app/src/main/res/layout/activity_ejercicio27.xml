@@ -10,20 +10,33 @@
     tools:context=".ejercicios.ejercicio27.Ejercicio27Activity">
 
     <TextView
-        android:id="@+id/tvTitle"
+        android:id="@+id/tvHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ejercicio 27"
-        android:textSize="24sp"
+        android:text="Ejercicio 27 - Detección de Posición"
+        android:textSize="20sp"
         android:textStyle="bold"
-        android:layout_marginBottom="16dp" />
+        android:textAlignment="center"
+        android:layout_marginBottom="32dp" />
 
     <TextView
-        android:id="@+id/tvSubtitle"
+        android:id="@+id/tvPosicionDispositivo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pendiente de implementación"
+        android:text="Posición: --"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textColor="?attr/colorPrimary"
+        android:textAlignment="center"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:id="@+id/tvValoresAcelerometro"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="X: -- | Y: -- | Z: --"
         android:textSize="16sp"
-        android:textColor="?android:attr/textColorSecondary" />
+        android:textColor="?android:attr/textColorSecondary"
+        android:textAlignment="center" />
 
 </LinearLayout>

@@ -1,29 +1,33 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/layoutFondo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="24dp"
     android:gravity="center"
+    android:background="#C8E6C9"
     tools:context=".ejercicios.ejercicio19.Ejercicio19Activity">
 
     <TextView
-        android:id="@+id/tvTitle"
+        android:id="@+id/tvHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ejercicio 19"
-        android:textSize="24sp"
+        android:text="Ejercicio 19 - Sensor de Proximidad"
+        android:textSize="20sp"
         android:textStyle="bold"
-        android:layout_marginBottom="16dp" />
+        android:textAlignment="center"
+        android:layout_marginBottom="24dp" />
 
     <TextView
-        android:id="@+id/tvSubtitle"
+        android:id="@+id/tvEstadoProximidad"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pendiente de implementación"
-        android:textSize="16sp"
-        android:textColor="?android:attr/textColorSecondary" />
+        android:text="Esperando lectura del sensor..."
+        android:textSize="26sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="#1B5E20" />
 
 </LinearLayout>

@@ -6,24 +6,49 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="24dp"
-    android:gravity="center"
     tools:context=".ejercicios.ejercicio28.Ejercicio28Activity">
 
     <TextView
-        android:id="@+id/tvTitle"
-        android:layout_width="wrap_content"
+        android:id="@+id/tvHeader"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Ejercicio 28"
-        android:textSize="24sp"
+        android:text="Ejercicio 28 - Registro de Sensores"
+        android:textSize="20sp"
         android:textStyle="bold"
+        android:textAlignment="center"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/tvResumenActual"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Monitoreando Sensores..."
+        android:textSize="14sp"
+        android:textAlignment="center"
+        android:textColor="?android:attr/textColorSecondary"
+        android:layout_marginBottom="16dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnGuardarRegistro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Guardar Muestra en Historial"
+        android:textSize="16sp"
         android:layout_marginBottom="16dp" />
 
     <TextView
-        android:id="@+id/tvSubtitle"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Pendiente de implementación"
+        android:text="Muestras Guardadas:"
         android:textSize="16sp"
-        android:textColor="?android:attr/textColorSecondary" />
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvRegistros"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        tools:listitem="@layout/item_registro_sensor" />
 
 </LinearLayout>

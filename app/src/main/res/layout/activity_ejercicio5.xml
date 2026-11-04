@@ -5,22 +5,23 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="24dp"
+    android:padding="28dp"
     android:gravity="center"
     tools:context=".ejercicios.ejercicio5.Ejercicio5Activity">
 
     <TextView
-        android:id="@+id/tvHeader"
+        android:id="@+id/lblTituloConsola"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ejercicio 5 - Corrutina en Consola"
+        android:text="Ejercicio 5 - Impresión en Consola con Corrutina"
         android:textSize="20sp"
         android:textStyle="bold"
         android:textAlignment="center"
+        android:textColor="@color/primary_color"
         android:layout_marginBottom="32dp" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnIniciar"
+        android:id="@+id/btnDispararCorrutina"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Lanzar Corrutina"
@@ -32,12 +33,12 @@
         android:layout_marginBottom="24dp" />
 
     <TextView
-        android:id="@+id/tvEstado"
+        android:id="@+id/txtEstadoCorrutina"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Presiona el botón para imprimir mensajes en consola (Logcat)"
+        android:text="Presiona el botón para comenzar las impresiones en consola..."
         android:textSize="14sp"
-        android:textColor="?android:attr/textColorSecondary"
+        android:textColor="@color/secondary_color"
         android:textAlignment="center" />
 
 </LinearLayout>

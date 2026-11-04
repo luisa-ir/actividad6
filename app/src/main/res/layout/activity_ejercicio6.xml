@@ -5,44 +5,45 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="24dp"
+    android:padding="28dp"
     android:gravity="center_horizontal"
     tools:context=".ejercicios.ejercicio6.Ejercicio6Activity">
 
     <TextView
-        android:id="@+id/tvHeader"
+        android:id="@+id/lblTituloSensor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ejercicio 6 - Sensor con Corrutinas"
+        android:text="Ejercicio 6 - Simulación Periódica de Sensor"
         android:textSize="20sp"
         android:textStyle="bold"
         android:textAlignment="center"
+        android:textColor="@color/primary_color"
         android:layout_marginBottom="32dp" />
 
     <TextView
-        android:id="@+id/tvValorSensor"
+        android:id="@+id/lblLecturaSensor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Valor del sensor: --"
+        android:text="Lectura del sensor: --"
         android:textSize="28sp"
         android:textStyle="bold"
-        android:textColor="?attr/colorPrimary"
+        android:textColor="@color/custom_purple"
         android:layout_marginBottom="48dp"
         android:textAlignment="center" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnIniciar"
+        android:id="@+id/btnActivarSensor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Iniciar Sensor"
+        android:text="Iniciar Monitoreo"
         android:textSize="16sp"
         android:layout_marginBottom="12dp" />
 
     <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnDetener"
+        android:id="@+id/btnDesactivarSensor"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Detener Sensor"
+        android:text="Detener Monitoreo"
         android:textSize="16sp"
         android:enabled="false"
         style="@style/Widget.MaterialComponents.Button.OutlinedButton" />

@@ -10,8 +10,8 @@ import com.example.actividad6.R
 
 class Ejercicio8Activity : AppCompatActivity() {
 
-    private lateinit var tvCoordenadas: TextView
-    private lateinit var touchArea: View
+    private lateinit var lblPosicionPointer: TextView
+    private lateinit var panelSuperficieTouch: View
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,15 +21,15 @@ class Ejercicio8Activity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "Ejercicio 8"
 
-        tvCoordenadas = findViewById(R.id.tvCoordenadas)
-        touchArea = findViewById(R.id.touchArea)
+        lblPosicionPointer = findViewById(R.id.lblPosicionPointer)
+        panelSuperficieTouch = findViewById(R.id.panelSuperficieTouch)
 
-        touchArea.setOnTouchListener { view, event ->
+        panelSuperficieTouch.setOnTouchListener { view, event ->
             when (event.action) {
                 MotionEvent.ACTION_DOWN, MotionEvent.ACTION_MOVE -> {
-                    val x = event.x.toInt()
-                    val y = event.y.toInt()
-                    tvCoordenadas.text = "X: $x px | Y: $y px"
+                    val px = event.x.toInt()
+                    val py = event.y.toInt()
+                    lblPosicionPointer.text = "Coordenadas -> X: $px px | Y: $py px"
                     true
                 }
                 MotionEvent.ACTION_UP -> {

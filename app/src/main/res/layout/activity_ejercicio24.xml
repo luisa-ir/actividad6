@@ -10,20 +10,43 @@
     tools:context=".ejercicios.ejercicio24.Ejercicio24Activity">
 
     <TextView
-        android:id="@+id/tvTitle"
+        android:id="@+id/tvHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ejercicio 24"
-        android:textSize="24sp"
+        android:text="Ejercicio 24 - Detector de Pasos"
+        android:textSize="20sp"
         android:textStyle="bold"
-        android:layout_marginBottom="16dp" />
+        android:textAlignment="center"
+        android:layout_marginBottom="32dp" />
 
     <TextView
-        android:id="@+id/tvSubtitle"
+        android:id="@+id/tvContadorPasos"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pendiente de implementación"
+        android:text="0"
+        android:textSize="64sp"
+        android:textStyle="bold"
+        android:textColor="?attr/colorPrimary"
+        android:layout_marginBottom="8dp" />
+
+    <TextView
+        android:id="@+id/tvEtiquetaPasos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pasos detectados"
+        android:textSize="18sp"
+        android:textColor="?android:attr/textColorSecondary"
+        android:layout_marginBottom="48dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnReiniciarPasos"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reiniciar Contador"
         android:textSize="16sp"
-        android:textColor="?android:attr/textColorSecondary" />
+        android:paddingStart="32dp"
+        android:paddingEnd="32dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="12dp" />
 
 </LinearLayout>

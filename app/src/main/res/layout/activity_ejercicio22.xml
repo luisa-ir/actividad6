@@ -6,24 +6,42 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="24dp"
-    android:gravity="center"
+    android:gravity="center_horizontal"
     tools:context=".ejercicios.ejercicio22.Ejercicio22Activity">
 
     <TextView
-        android:id="@+id/tvTitle"
+        android:id="@+id/tvHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ejercicio 22"
-        android:textSize="24sp"
+        android:text="Ejercicio 22 - Brújula al Norte Magnético"
+        android:textSize="20sp"
         android:textStyle="bold"
+        android:textAlignment="center"
         android:layout_marginBottom="16dp" />
 
     <TextView
-        android:id="@+id/tvSubtitle"
-        android:layout_width="wrap_content"
+        android:id="@+id/tvAzimutBrujula"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Pendiente de implementación"
-        android:textSize="16sp"
-        android:textColor="?android:attr/textColorSecondary" />
+        android:text="Norte: 0.0°"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="?attr/colorPrimary"
+        android:textAlignment="center"
+        android:layout_marginBottom="32dp" />
+
+    <FrameLayout
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center">
+
+        <ImageView
+            android:id="@+id/ivBrujula"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_brujula"
+            android:contentDescription="Brújula indicando al Norte" />
+
+    </FrameLayout>
 
 </LinearLayout>

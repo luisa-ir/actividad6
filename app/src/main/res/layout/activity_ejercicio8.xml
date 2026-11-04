@@ -5,33 +5,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="24dp"
+    android:padding="28dp"
     android:gravity="center_horizontal"
     tools:context=".ejercicios.ejercicio8.Ejercicio8Activity">
 
     <TextView
-        android:id="@+id/tvHeader"
+        android:id="@+id/lblTituloCoordenadas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ejercicio 8 - Coordenadas X e Y"
+        android:text="Ejercicio 8 - Tracker de Coordenadas X e Y"
         android:textSize="20sp"
         android:textStyle="bold"
         android:textAlignment="center"
+        android:textColor="@color/primary_color"
         android:layout_marginBottom="16dp" />
 
     <TextView
-        android:id="@+id/tvCoordenadas"
+        android:id="@+id/lblPosicionPointer"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="X: --, Y: --"
-        android:textSize="24sp"
+        android:text="Posición: X: -- px | Y: -- px"
+        android:textSize="22sp"
         android:textStyle="bold"
-        android:textColor="?attr/colorPrimary"
+        android:textColor="@color/custom_blue"
         android:textAlignment="center"
         android:layout_marginBottom="24dp" />
 
     <FrameLayout
-        android:id="@+id/touchArea"
+        android:id="@+id/panelSuperficieTouch"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
@@ -43,8 +44,8 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:text="Toca o arrastra aquí dentro"
-            android:textSize="18sp"
+            android:text="Presiona o arrastra el dedo en este cuadro"
+            android:textSize="17sp"
             android:textColor="#558B2F" />
 
     </FrameLayout>

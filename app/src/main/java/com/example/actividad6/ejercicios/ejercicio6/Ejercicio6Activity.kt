@@ -14,11 +14,11 @@ import kotlin.random.Random
 
 class Ejercicio6Activity : AppCompatActivity() {
 
-    private lateinit var tvValorSensor: TextView
-    private lateinit var btnIniciar: Button
-    private lateinit var btnDetener: Button
+    private lateinit var lblLecturaSensor: TextView
+    private lateinit var btnActivarSensor: Button
+    private lateinit var btnDesactivarSensor: Button
 
-    private var sensorJob: Job? = null
+    private var trabajoSensor: Job? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -27,43 +27,43 @@ class Ejercicio6Activity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "Ejercicio 6"
 
-        tvValorSensor = findViewById(R.id.tvValorSensor)
-        btnIniciar = findViewById(R.id.btnIniciar)
-        btnDetener = findViewById(R.id.btnDetener)
+        lblLecturaSensor = findViewById(R.id.lblLecturaSensor)
+        btnActivarSensor = findViewById(R.id.btnActivarSensor)
+        btnDesactivarSensor = findViewById(R.id.btnDesactivarSensor)
 
-        btnIniciar.setOnClickListener {
-            iniciarSensor()
+        btnActivarSensor.setOnClickListener {
+            iniciarTransmisionSensor()
         }
 
-        btnDetener.setOnClickListener {
-            detenerSensor()
+        btnDesactivarSensor.setOnClickListener {
+            detenerTransmisionSensor()
         }
     }
 
-    private fun iniciarSensor() {
-        btnIniciar.isEnabled = false
-        btnDetener.isEnabled = true
+    private fun iniciarTransmisionSensor() {
+        btnActivarSensor.isEnabled = false
+        btnDesactivarSensor.isEnabled = true
 
-        sensorJob = lifecycleScope.launch {
+        trabajoSensor = lifecycleScope.launch {
             while (isActive) {
-                val valor = Random.nextInt(10, 100)
-                tvValorSensor.text = "Valor del sensor: $valor"
+                val lectura = Random.nextInt(10, 100)
+                lblLecturaSensor.text = "Valor sensor: $lectura Hz"
                 delay(500)
             }
         }
     }
 
-    private fun detenerSensor() {
-        sensorJob?.cancel()
-        sensorJob = null
-        btnIniciar.isEnabled = true
-        btnDetener.isEnabled = false
-        tvValorSensor.text = "Sensor detenido"
+    private fun detenerTransmisionSensor() {
+        trabajoSensor?.cancel()
+        trabajoSensor = null
+        btnActivarSensor.isEnabled = true
+        btnDesactivarSensor.isEnabled = false
+        lblLecturaSensor.text = "Sensor en pausa"
     }
 
     override fun onPause() {
         super.onPause()
-        detenerSensor()
+        detenerTransmisionSensor()
     }
 
     override fun onSupportNavigateUp(): Boolean {

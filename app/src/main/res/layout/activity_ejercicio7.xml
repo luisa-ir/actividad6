@@ -5,33 +5,34 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="24dp"
+    android:padding="28dp"
     android:gravity="center_horizontal"
     tools:context=".ejercicios.ejercicio7.Ejercicio7Activity">
 
     <TextView
-        android:id="@+id/tvHeader"
+        android:id="@+id/lblTituloTouch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ejercicio 7 - Eventos Táctiles"
+        android:text="Ejercicio 7 - Detección de Eventos Touch"
         android:textSize="20sp"
         android:textStyle="bold"
         android:textAlignment="center"
+        android:textColor="@color/primary_color"
         android:layout_marginBottom="24dp" />
 
     <TextView
-        android:id="@+id/tvMensajeTactil"
+        android:id="@+id/lblEstadoTouch"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:background="#E8EAF6"
         android:gravity="center"
-        android:text="Toca o desliza sobre este cuadro"
+        android:text="Interactúa o toca en esta zona"
         android:textSize="24sp"
         android:textStyle="bold"
         android:textColor="#1A237E"
         android:clickable="true"
         android:focusable="true"
-        android:padding="16dp" />
+        android:padding="20dp" />
 
 </LinearLayout>

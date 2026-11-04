@@ -12,8 +12,8 @@ import kotlinx.coroutines.launch
 
 class Ejercicio5Activity : AppCompatActivity() {
 
-    private lateinit var btnIniciar: Button
-    private lateinit var tvEstado: TextView
+    private lateinit var btnDispararCorrutina: Button
+    private lateinit var txtEstadoCorrutina: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,26 +22,26 @@ class Ejercicio5Activity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "Ejercicio 5"
 
-        btnIniciar = findViewById(R.id.btnIniciar)
-        tvEstado = findViewById(R.id.tvEstado)
+        btnDispararCorrutina = findViewById(R.id.btnDispararCorrutina)
+        txtEstadoCorrutina = findViewById(R.id.txtEstadoCorrutina)
 
-        btnIniciar.setOnClickListener {
-            lanzarCorrutinaConsola()
+        btnDispararCorrutina.setOnClickListener {
+            ejecutarConsolaBackground()
         }
     }
 
-    private fun lanzarCorrutinaConsola() {
-        btnIniciar.isEnabled = false
-        tvEstado.text = "Corrutina ejecutándose... Revisa Logcat (tag: Ejercicio5)"
+    private fun ejecutarConsolaBackground() {
+        btnDispararCorrutina.isEnabled = false
+        txtEstadoCorrutina.text = "Ejecutando corrutina... Revisa el Logcat de Android Studio."
 
         lifecycleScope.launch {
             for (i in 1..5) {
                 delay(1000)
-                Log.d("Ejercicio5", "Mensaje $i de 5 impreso en consola")
-                println("Ejercicio5 - Mensaje $i")
+                Log.d("Ejercicio5", "Mensaje $i impreso desde corrutina")
+                println("Consola Ejercicio5 -> Mensaje $i")
             }
-            tvEstado.text = "¡Corrutina finalizada! Se imprimieron 5 mensajes."
-            btnIniciar.isEnabled = true
+            txtEstadoCorrutina.text = "Proceso finalizado. 5 mensajes impresos en consola."
+            btnDispararCorrutina.isEnabled = true
         }
     }
 

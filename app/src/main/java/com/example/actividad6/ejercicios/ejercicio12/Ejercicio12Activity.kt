@@ -11,9 +11,9 @@ import com.example.actividad6.R
 
 class Ejercicio12Activity : AppCompatActivity() {
 
-    private lateinit var tvGestoDetectado: TextView
-    private lateinit var gestureArea: View
-    private lateinit var gestureDetector: GestureDetector
+    private lateinit var txtGestoProcesado: TextView
+    private lateinit var superficieGesto: View
+    private lateinit var detectorGestos: GestureDetector
 
     @SuppressLint("ClickableViewAccessibility")
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -23,17 +23,17 @@ class Ejercicio12Activity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "Ejercicio 12"
 
-        tvGestoDetectado = findViewById(R.id.tvGestoDetectado)
-        gestureArea = findViewById(R.id.gestureArea)
+        txtGestoProcesado = findViewById(R.id.txtGestoProcesado)
+        superficieGesto = findViewById(R.id.superficieGesto)
 
-        gestureDetector = GestureDetector(this, object : GestureDetector.SimpleOnGestureListener() {
+        detectorGestos = GestureDetector(this, object : GestureDetector.SimpleOnGestureListener() {
             override fun onSingleTapConfirmed(e: MotionEvent): Boolean {
-                tvGestoDetectado.text = "Gesto: Toque simple (Tap)"
+                txtGestoProcesado.text = "Gesto Detectado -> Toque Simple (Tap)"
                 return true
             }
 
             override fun onLongPress(e: MotionEvent) {
-                tvGestoDetectado.text = "Gesto: Toque prolongado (Long Press)"
+                txtGestoProcesado.text = "Gesto Detectado -> Presión Larga (Long Press)"
             }
 
             override fun onFling(
@@ -42,7 +42,7 @@ class Ejercicio12Activity : AppCompatActivity() {
                 velocityX: Float,
                 velocityY: Float
             ): Boolean {
-                tvGestoDetectado.text = "Gesto: Deslizamiento rápido (Fling)"
+                txtGestoProcesado.text = "Gesto Detectado -> Deslizamiento Rápido (Fling)"
                 return true
             }
 
@@ -51,11 +51,11 @@ class Ejercicio12Activity : AppCompatActivity() {
             }
         })
 
-        gestureArea.setOnTouchListener { view, event ->
+        superficieGesto.setOnTouchListener { v, event ->
             if (event.action == MotionEvent.ACTION_UP) {
-                view.performClick()
+                v.performClick()
             }
-            gestureDetector.onTouchEvent(event)
+            detectorGestos.onTouchEvent(event)
         }
     }
 

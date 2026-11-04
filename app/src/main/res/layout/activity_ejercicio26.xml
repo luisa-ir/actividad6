@@ -10,20 +10,33 @@
     tools:context=".ejercicios.ejercicio26.Ejercicio26Activity">
 
     <TextView
-        android:id="@+id/tvTitle"
+        android:id="@+id/tvHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ejercicio 26"
-        android:textSize="24sp"
+        android:text="Ejercicio 26 - Detector de Sacudidas"
+        android:textSize="20sp"
         android:textStyle="bold"
-        android:layout_marginBottom="16dp" />
+        android:textAlignment="center"
+        android:layout_marginBottom="32dp" />
 
     <TextView
-        android:id="@+id/tvSubtitle"
+        android:id="@+id/tvEstadoShake"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pendiente de implementación"
+        android:text="Sacude el dispositivo..."
+        android:textSize="32sp"
+        android:textStyle="bold"
+        android:textColor="?attr/colorPrimary"
+        android:textAlignment="center"
+        android:layout_marginBottom="24dp" />
+
+    <TextView
+        android:id="@+id/tvMagnitudAceleracion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Aceleración actual: -- m/s²"
         android:textSize="16sp"
-        android:textColor="?android:attr/textColorSecondary" />
+        android:textColor="?android:attr/textColorSecondary"
+        android:textAlignment="center" />
 
 </LinearLayout>

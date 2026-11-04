@@ -10,9 +10,9 @@ import com.example.actividad6.R
 
 class Ejercicio4Activity : AppCompatActivity() {
 
-    private lateinit var etNumeroN: EditText
-    private lateinit var btnCalcular: Button
-    private lateinit var tvResultado: TextView
+    private lateinit var inputLimiteN: EditText
+    private lateinit var btnCalcularSuma: Button
+    private lateinit var lblResultadoSuma: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -21,29 +21,29 @@ class Ejercicio4Activity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "Ejercicio 4"
 
-        etNumeroN = findViewById(R.id.etNumeroN)
-        btnCalcular = findViewById(R.id.btnCalcular)
-        tvResultado = findViewById(R.id.tvResultado)
+        inputLimiteN = findViewById(R.id.inputLimiteN)
+        btnCalcularSuma = findViewById(R.id.btnCalcularSuma)
+        lblResultadoSuma = findViewById(R.id.lblResultadoSuma)
 
-        btnCalcular.setOnClickListener {
-            val nTexto = etNumeroN.text.toString()
-            if (nTexto.isEmpty()) {
-                Toast.makeText(this, "Por favor ingresa un número", Toast.LENGTH_SHORT).show()
+        btnCalcularSuma.setOnClickListener {
+            val valorTexto = inputLimiteN.text.toString()
+            if (valorTexto.isEmpty()) {
+                Toast.makeText(this, "Ingresa un número entero válido", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
 
-            val n = nTexto.toLongOrNull() ?: 0L
-            btnCalcular.isEnabled = false
-            tvResultado.text = "Calculando..."
+            val n = valorTexto.toLongOrNull() ?: 0L
+            btnCalcularSuma.isEnabled = false
+            lblResultadoSuma.text = "Calculando suma de los primeros $n números..."
 
-            val miTarea = MiTarea(n) { resultado ->
+            val tareaSuma = MiTarea(n) { total ->
                 runOnUiThread {
-                    tvResultado.text = "Suma de los primeros $n números:\n$resultado"
-                    btnCalcular.isEnabled = true
+                    lblResultadoSuma.text = "Suma total (1 a $n):\n$total"
+                    btnCalcularSuma.isEnabled = true
                 }
             }
 
-            Thread(miTarea).start()
+            Thread(tareaSuma).start()
         }
     }
 

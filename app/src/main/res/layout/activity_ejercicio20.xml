@@ -1,29 +1,44 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/layoutFondo"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="24dp"
     android:gravity="center"
+    android:background="#212121"
     tools:context=".ejercicios.ejercicio20.Ejercicio20Activity">
 
     <TextView
-        android:id="@+id/tvTitle"
+        android:id="@+id/tvHeader"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Ejercicio 20"
-        android:textSize="24sp"
+        android:text="Ejercicio 20 - Sensor de Luz (TYPE_LIGHT)"
+        android:textSize="20sp"
         android:textStyle="bold"
-        android:layout_marginBottom="16dp" />
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="24dp" />
 
     <TextView
-        android:id="@+id/tvSubtitle"
+        android:id="@+id/tvLuzLux"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pendiente de implementación"
-        android:textSize="16sp"
-        android:textColor="?android:attr/textColorSecondary" />
+        android:text="Intensidad: -- lux"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:textColor="#FFFFFF"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/tvEstadoLuz"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Leyendo sensor de luz..."
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:textColor="#B0BEC5" />
 
 </LinearLayout>

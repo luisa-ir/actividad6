@@ -8,8 +8,8 @@ import com.example.actividad6.R
 
 class Ejercicio1Activity : AppCompatActivity() {
 
-    private lateinit var tvResultado: TextView
-    private lateinit var btnIniciar: Button
+    private lateinit var lblContadorOutput: TextView
+    private lateinit var btnComenzarSecuencia: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -18,19 +18,19 @@ class Ejercicio1Activity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = "Ejercicio 1"
 
-        tvResultado = findViewById(R.id.tvResultado)
-        btnIniciar = findViewById(R.id.btnIniciar)
+        lblContadorOutput = findViewById(R.id.lblContadorOutput)
+        btnComenzarSecuencia = findViewById(R.id.btnComenzarSecuencia)
 
-        btnIniciar.setOnClickListener {
-            iniciarHiloContador()
+        btnComenzarSecuencia.setOnClickListener {
+            ejecutarSecuenciaHilo()
         }
     }
 
-    private fun iniciarHiloContador() {
-        btnIniciar.isEnabled = false
+    private fun ejecutarSecuenciaHilo() {
+        btnComenzarSecuencia.isEnabled = false
 
         Thread {
-            for (i in 1..10) {
+            for (paso in 1..10) {
                 try {
                     Thread.sleep(1000)
                 } catch (e: InterruptedException) {
@@ -38,12 +38,12 @@ class Ejercicio1Activity : AppCompatActivity() {
                 }
 
                 runOnUiThread {
-                    tvResultado.text = i.toString()
+                    lblContadorOutput.text = "Conteo: $paso / 10"
                 }
             }
 
             runOnUiThread {
-                btnIniciar.isEnabled = true
+                btnComenzarSecuencia.isEnabled = true
             }
         }.start()
     }
